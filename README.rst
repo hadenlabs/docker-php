@@ -1,9 +1,10 @@
 DOCKER PHP
-===========
+==========
 
-docker for php
+Build
+-----
 
-|Build Status| |Docker Stars| |Docker Pulls| |Code Climate| |GitHub stars| |Issue Count| |license| |Test Coverage|
+|Build Status| |GitHub issues| |GitHub license|
 
 :Version: 0.0.0
 :Web: https://github.com/hadenlabs/docker-php
@@ -11,88 +12,150 @@ docker for php
 :Source: https://github.com/hadenlabs/docker-php
 :Keywords: docker-php
 
-Download size of this image is only:
+Docker Image:
+-------------
 
-|MicroBadger|
+|MicroBadger| |Docker Stars| |Docker Pulls|
 
 .. contents:: Table of Contents:
     :local:
 
-Requirements
+Features
+--------
+
+* Task
+
+Dependencies
 ------------
 
+List of applications:
+
+- `Python 3.6.4`_
+- `Docker`_
+- `Docker Compose`_
+
+Quick Start
+===========
+
+- Fork this repository
+
+Usage
+-----
+
+- Install dependences
+
 .. code-block:: bash
 
-  make setup
+  λ make setup
 
-Actions Makefile
-----------------
+- Build images
 
 .. code-block:: bash
 
-  λ make
-      ༼ つ ◕_◕ ༽つ Makefile for Cookiecutter docker
+  λ make build version={{version}}
 
-      Usage:
-          make environment               create environment with pyenv
-          make install                   install dependences python by env
-          make clean                     remove files of build
-          make setup                     install requirements
 
-          Docker:
+Support
+-------
 
-              make docker.build         build all services with docker-compose
-              make docker.down          down services docker-compose
-              make docker.ssh           connect by ssh to container
-              make docker.stop          stop services by env
-              make docker.verify_network           verify network
-              make docker.up             up services of docker-compose
-              make docker.list           list services of docker
+If you want to support this project, i only accept ``IOTA`` :p.
 
-          Tests:
+.. code-block:: bash
 
-              test.lint                  Run all pre-commit
-              test.syntax                Run all syntax in code
+    Address: FTDCZELEMOQGL9MBWFZENJLFIZUBGMXLFVPRB9HTWYDYPTFKASJCEGJMSAXUWDQC9SJUDMZVIQKACQEEYPEUYLAMMD
+
+
+Team
+----
+
++---------------+
+| |Luis Mayta|  |
++---------------+
+| `luis mayta`_ |
++---------------+
+
+License
+-------
+
+MIT
 
 Changelog
 ---------
 
-Please see `CHANGELOG <CHANGELOG.md>`__ for more information what has
-changed recently.
+Please see `CHANGELOG`_ for more information what
+has changed recently.
 
 Contributing
 ------------
 
-Please see `CONTRIBUTING <CONTRIBUTING.md>`__ for details.
+Contributions are welcome!
 
-Credits
--------
+Review the `CONTRIBUTING`_ for details on how to:
 
-Made with :heart: :coffee: and :pizza: by `hadenlabs <https://github.com/hadenlabs>`__
+* Submit issues
+* Submit pull requests
 
--  `All Contributors <AUTHORS>`__
+Contact Info
+------------
 
-.. |Code Climate| image:: https://codeclimate.com/github/hadenlabs/docker-php/badges/gpa.svg
-   :target: https://codeclimate.com/github/hadenlabs/docker-php
-.. |GitHub issues| image:: https://img.shields.io/github/issues/hadenlabs/docker-php.svg
-   :target: https://github.com/hadenlabs/docker-php/issues
-.. |GitHub forks| image:: https://img.shields.io/github/forks/hadenlabs/docker-php.svg
-   :target: https://github.com/hadenlabs/docker-php
-.. |GitHub stars| image:: https://img.shields.io/github/stars/hadenlabs/docker-php.svg
-   :target: https://github.com/hadenlabs/docker-php
-.. |Issue Count| image:: https://codeclimate.com/github/hadenlabs/docker-php/badges/issue_count.svg
-   :target: https://codeclimate.com/github/hadenlabs/docker-php
-.. |license| image:: https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square
-   :target: LICENSE
-.. |Test Coverage| image:: https://codeclimate.com/github/hadenlabs/docker-php/badges/coverage.svg
-   :target: https://codeclimate.com/github/hadenlabs/docker-php/coverage
+Feel free to contact me to discuss any issues, questions, or comments.
 
-.. |MicroBadger| image:: https://images.microbadger.com/badges/image/hadenlabs/docker-php.svg
-   :target: http://microbadger.com/images/hadenlabs/docker-php
-.. |Docker Stars| image:: https://img.shields.io/docker/stars/hadenlabs/docker-php.svg?style=flat-square
-   :target: https://hub.docker.com/r/hadenlabs/docker-php
-.. |Docker Pulls| image:: https://img.shields.io/docker/pulls/hadenlabs/docker-php.svg?style=flat-square
-   :target: https://hub.docker.com/r/hadenlabs/docker-php
+* `Email`_
+* `Twitter`_
+* `GitHub`_
+* `LinkedIn`_
+* `Website`_
+* `PGP`_
+
+|linkedin| |beacon| |made|
+
+Made with :coffee: and :pizza: by `luis mayta`_ and `hadenlabs`_.
+
+.. Links
+.. _`changelog`: CHANGELOG.rst
+.. _`contributors`: AUTHORS
+.. _`contributing`: CONTRIBUTING.rst
+
+.. _`hadenlabs`: https://github.com/hadenlabs
+.. _`luis mayta`: https://github.com/luismayta
+
+.. _`Github`: https://github.com/luismayta
+.. _`Linkedin`: https://www.linkedin.com/in/luismayta
+.. _`Email`: slovacus@gmail.com
+    :target: mailto:slovacus@gmail.com
+.. _`Twitter`: https://twitter.com/slovacus
+.. _`Website`: http://luismayta.github.io
+.. _`PGP`: https://keybase.io/luismayta/pgp_keys.asc
 
 .. |Build Status| image:: https://travis-ci.org/hadenlabs/docker-php.svg
    :target: https://travis-ci.org/hadenlabs/docker-php
+.. |GitHub issues| image:: https://img.shields.io/github/issues/hadenlabs/docker-php.svg
+   :target: https://github.com/hadenlabs/docker-php/issues
+.. |GitHub license| image:: https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square
+   :target: LICENSE
+
+.. Team:
+.. |Luis Mayta| image:: https://github.com/luismayta.png?size=100
+   :target: https://github.com/luismayta
+
+.. Badges for images hub docker
+.. |MicroBadger| image:: https://images.microbadger.com/badges/image/hadenlabs/hugo.svg
+   :target: http://microbadger.com/images/hadenlabs/hugo
+.. |Docker Stars| image:: https://img.shields.io/docker/stars/hadenlabs/hugo.svg?style=flat-square
+   :target: https://hub.docker.com/r/hadenlabs/hugo
+.. |Docker Pulls| image:: https://img.shields.io/docker/pulls/hadenlabs/hugo.svg?style=flat-square
+   :target: https://hub.docker.com/r/hadenlabs/hugo
+
+.. Footer:
+.. |linkedin| image:: http://www.linkedin.com/img/webpromo/btn_liprofile_blue_80x15.png
+   :target: http://pe.linkedin.com/in/luismayta
+.. |beacon| image:: https://ga-beacon.appspot.com/UA-65019326-1/github.com/hadenlabs/docker-php/readme
+   :target: https://github.com/hadenlabs/docker-php
+.. |made| image:: https://img.shields.io/badge/Made%20with-Zsh-1f425f.svg
+   :target: http://www.zsh.org
+
+.. Dependences:
+
+.. _Python 3.6.4: https://www.python.org/downloads/release/python-364
+.. _Docker: https://www.docker.com/
+.. _Docker Compose: https://docs.docker.com/compose/
