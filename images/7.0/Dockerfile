@@ -1,10 +1,11 @@
 FROM php:7.0.22
 MAINTAINER Luis Mayta <@slovacus>
 
-ENV BUILD_DEPS default-libmysqlclient-dev \
+ENV BUILD_DEPS libmysqlclient-dev \
   libbz2-dev \
   libmemcached-dev \
-  libsasl2-dev
+  libsasl2-dev \
+  libxml2-dev
 
 ENV RUNTIME_DEPS curl \
   git-core \
@@ -46,7 +47,7 @@ RUN echo \
   && docker-php-ext-enable xdebug \
 
   && apt-get clean \
-  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+  && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
   && apt-get purge -y --auto-remove $BUILD_DEPS \
   && rm -r /var/lib/apt/lists/* \
   && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
