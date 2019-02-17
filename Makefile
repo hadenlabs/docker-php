@@ -22,8 +22,13 @@ PROVISION_DIR:=$(ROOT_DIR)/provision
 FILE_README:=$(ROOT_DIR)/README.rst
 PATH_DOCKER_COMPOSE:=provision/docker-compose
 
+PARENT_IMAGE := php
+IMAGE := hadenlabs/php
+VERSION ?= latest
+
 pip_install := pip install -r
 docker-compose:=docker-compose -f docker-compose.yml
+docker-build:= docker build --quiet -t
 
 include extras/make/*.mk
 
@@ -42,9 +47,13 @@ help:
 	@make test.help
 
 build:
-	docker build --no-cache --build-arg version=${version} -t hadenlabs/hugo:${version} -f Dockerfile .
-	docker login
-	docker push hadenlabs/php:${version}
+	@echo " =====> Building $(IMAGE):${version}..."
+	@dir="images/$(subst -,/,${version})"; \
+	if [ -z "${version}" ]; then \
+		$(docker-build) $(IMAGE):latest .;\
+	else \
+		$(docker-build) $(IMAGE):${version} $${dir} ;\
+	fi
 
 clean:
 	@echo "$(TAG)"Cleaning up"$(END)"
